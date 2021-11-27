@@ -1,0 +1,100 @@
+.our-qualities {
+  width: 100%;
+}
+
+.our-qualities-container {
+  //   justify-content: space-between;
+  //   margin-right: auto;
+  //   margin-left: auto;
+  //   margin-left: 30px;
+  //   margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.icon-qualities {
+  display: flex;
+  height: 120px;
+  margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color-two);
+}
+
+.our-qualities-topic {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--primary-text-color);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+.our-qualities-container-item {
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    // flex-basis: calc((100% - 2 * 15px) / 2);
+    // &:nth-child(1) {
+    //   margin-right: 15px;
+    // }
+    // &:nth-child(2) {
+    //   margin-left: 15px;
+    // }
+    // &:nth-child(3) {
+    //   margin-right: 15px;
+    // }
+    // &:nth-child(4) {
+    //   margin-left: 15px;
+    // }
+    margin-right: 30px;
+    flex-basis: calc((100% - 1 * 30px) / 2);
+    &:nth-child(2) {
+      margin-right: 0px;
+    }
+    &:nth-child(4) {
+      margin-right: 0px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  }
+
+  // &:first-child {
+  //   margin-left: 0;
+}
+
+// .our-qualities-container-item:nth-child(1) {
+//   margin-bottom: 30px;
+// }
+
+.our-qualities-container-item-icon {
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--background-color-two);
+}
+
+.our-qualities-description {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--second-text-color);
+  display: inline-block;
+}

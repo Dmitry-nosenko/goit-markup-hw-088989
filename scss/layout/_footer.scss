@@ -1,0 +1,130 @@
+.footer {
+  background-color: var(--background-color-one);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-logo-link {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.logo-footer {
+  display: inline-block;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  color: var(--background-text-color);
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+.address {
+  text-align: center;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    align-items: flex-start;
+  }
+}
+
+.container-footer {
+  align-items: baseline;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.footer-right {
+  @media screen and (min-width: 1200px) {
+    margin-right: auto;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  //   margin-right: auto;
+  //   display: flex;
+  //   align-items: center;
+  //   flex-direction: row;
+}
+.map-address {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+  color: var(--header-color);
+  margin-bottom: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+}
+
+.address-contact {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+  color: var(--four-text-color);
+}
+
+.map-address-list-item {
+  margin-bottom: 8px;
+  @media screen and (max-width: 1199px) {
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
+  @media screen and (min-width: 1200px) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  // @media screen and (max-width: 767px) {
+  //   margin-bottom: 60px;
+  // }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+
+.footer-links {
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--header-color);
+  margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+}

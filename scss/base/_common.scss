@@ -1,0 +1,68 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-text-color);
+  background-color: var(--header-color);
+  letter-spacing: 0.03em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  list-style: none;
+
+  & .link.current {
+    color: var(--background-text-color);
+  }
+}
+
+.link {
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.current::after {
+    @media screen and (min-width: 768px) {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      border-radius: 2px;
+      bottom: -1px;
+      background-color: var(--background-text-color);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--background-text-color);
+  }
+
+  &:hover .mail-icon,
+  &:focus .mail-icon,
+  &:focus .tel-icon,
+  &:hover .tel-icon {
+    fill: var(--background-text-color);
+  }
+}

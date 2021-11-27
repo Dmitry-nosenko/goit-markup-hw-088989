@@ -1,0 +1,335 @@
+.header {
+  background-color: var(--header-color);
+  border-bottom: 1px solid var(--background-border-color-two);
+  // padding-top: 16px;
+  // padding-bottom: 16px;
+
+  // @media screen and (min-width: 768px) {
+  //   padding-top: 26px;
+  //   padding-bottom: 26px;
+  // }
+  // @media screen and (min-width: 1200px) {
+  //   padding-top: 24px;
+  //   padding-bottom: 25px;
+  // }
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.burger-btn {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  &:focus {
+    fill: var(--background-text-color);
+  }
+  @media screen and(min-width:768px) {
+    display: none;
+  }
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-btn__icon--menu {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 767px;
+  height: 100vh;
+  background-color: var(--header-color);
+  padding: 48px 40px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  // нужен ли при маленькой ширине сжимает
+  // flex-wrap: wrap;
+  justify-content: space-between;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // @media screen and (min-width: 300px) {
+  //   flex-wrap: unset;
+  // }
+}
+.mobile-nav {
+  margin-bottom: 30px;
+}
+.mobile-nav__item {
+  margin-bottom: 32px;
+  font-weight: 500;
+
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  font-size: 10vw;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 425px) {
+    font-size: 40px;
+  }
+}
+
+.mobile-nav__link {
+  color: var(--third-text-color);
+}
+
+.mobile-nav__contact {
+  margin-bottom: 32px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  font-size: 8vw;
+
+  @media screen and (min-width: 425px) {
+    font-size: 34px;
+    &:last-child {
+      margin-bottom: 64px;
+      font-size: 24px;
+    }
+  }
+}
+
+.mobile-nav__contact--tel {
+  color: var(--background-text-color);
+  &:focus,
+  &:hover {
+    color: var(--second-text-color);
+  }
+}
+
+.mobile-nav__contact--mail {
+  color: var(--second-text-color);
+  &:focus,
+  &:hover {
+    color: var(--background-text-color);
+  }
+}
+
+.mobile-nav__social {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  //подумать о переносе ссылок flex-wrap: wrap;
+}
+.mobile-nav__social--item {
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 6vw;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  border-right: 1px solid var(--border-mobile-color);
+  padding-right: 10px;
+
+  &:last-child {
+    margin-right: 0px;
+    border-right: none;
+  }
+  @media screen and (min-width: 420px) {
+    font-size: 18px;
+  }
+  //как вариант менять шрифты динамически от разрешения @media screen and (max-width: 479px) {
+  //   font-size: 4vw;
+  // }
+}
+
+.mobile-nav__social--link {
+  color: var(--background-text-color);
+  &:focus,
+  &:hover {
+    color: var(--second-text-color);
+  }
+}
+
+.mobile-menu.is-open {
+  @media screen and (max-width: 767px) {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
+
+.burger-btn--close {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    fill: var(--background-text-color);
+  }
+}
+.burger-btn__icon--close {
+  width: 40px;
+  height: 40px;
+}
+
+.logo {
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  color: var(--background-text-color);
+  // margin-right: 88px;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+
+  @media screen and(min-width:1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+    margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+.logo-dark {
+  color: var(--third-text-color);
+}
+.logo-light {
+  color: var(--header-color);
+}
+
+.header-nav {
+  margin-right: auto;
+
+  @media screen and(max-width:767px) {
+    display: none;
+  }
+}
+
+.header-nav__link {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header-nav__list {
+  display: flex;
+}
+
+.header-nav__contacts {
+  @media screen and(min-width:768px) {
+    display: block;
+  }
+
+  @media screen and(max-width:767px) {
+    display: none;
+  }
+  @media screen and(min-width:1200px) {
+    display: flex;
+  }
+}
+
+.header-nav__item {
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0px;
+
+    @media screen and(min-width:768px) {
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+  }
+}
+.header--contacts {
+  margin-right: 50px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-right: 0px;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
+.header-nav__link {
+  position: relative;
+}
+
+.header--contact-link {
+  display: flex;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16;
+  color: var(--second-text-color);
+  letter-spacing: 0.02em;
+  align-items: center;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+.link__tablet--mail {
+  @media screen and (max-width: 1199px) {
+    padding-top: 20px;
+  }
+}
+.link__tablet--tel {
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 20px;
+  }
+}
+
+.mail-icon {
+  margin-right: 10px;
+  height: 100%;
+  fill: var(--second-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-width: 1199px) {
+    margin-right: 8px;
+  }
+}
+
+.tel-icon {
+  margin-right: 10px;
+  height: 100%;
+  fill: var(--second-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (max-width: 1199px) {
+    margin-right: 8px;
+  }
+}

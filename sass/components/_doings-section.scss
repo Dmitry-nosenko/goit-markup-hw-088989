@@ -1,9 +1,0 @@
-.doings-section {
-  display: none;
-  padding-top: 60px;
-
-  @media screen and (min-width: $desktop) {
-    @include centeredFlex();
-    padding-top: 0;
-  }
-}

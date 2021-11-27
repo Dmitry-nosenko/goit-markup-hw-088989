@@ -1,754 +1,440 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WebStudio</title>
-    <link rel="stylesheet" href="./css/main.min.css" />
-  </head>
 
-  <body>
-    <header class="page-header">
-      <div class="container">
-        <div class="header-wrapper">
-          <nav class="main-nav">
-            <a href="./index.html" class="main-nav__logo-header">
-              <span class="main-nav__logo--accent">Web</span>Studio</a
-            >
-            <ul class="site-nav">
-              <li class="site-nav__item">
-                <a class="site-nav__link" href="./index.html">Студия</a>
-              </li>
-              <li class="site-nav__item">
-                <a class="site-nav__link current" href="./portfolio.html"
-                  >Портфолио</a
-                >
-              </li>
-              <li class="site-nav__item">
-                <a class="site-nav__link" href="./contacts.html">Контакты</a>
-              </li>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--Шапка сайта-->
+    <header class="header">
+        <div class="container header-container">
+            <a class="logo link" href="./index.html">Web<span class="logo-dark">Studio</span></a>
+            <nav class="header-nav">
+                <!--nav buttons-->
+                <ul class="list header-nav__list">
+                    <li class="header-nav__item"><a class="header-nav__link link" href="./index.html">Студия</a>
+                    </li>
+                    <li class="header-nav__item"><a class="header-nav__link link current" href="./portfolio.html">Портфолио</a></li>
+                    <li class="header-nav__item"><a class="header-nav__link link" href="">Контакты</a></li>
+                </ul>
+            </nav>
+    
+    
+            <!--почта и телефон-->
+            <ul class="list header-nav__list header-nav__contacts">
+                <li class="header--contacts">
+                    <div class="header__contacts-container"><a class="header--contact-link link link__tablet--mail"
+                            href="mailto:info@devstudio.com"><svg class="mail-icon" width="16px" height="12px">
+                                <use href="./images/sprite.svg#icon-mail"></use>
+                            </svg>info@devstudio.com </a>
+                    </div>
+                </li>
+                <li class="header--contacts">
+                    <div class="header__contacts-container">
+                        <a class="header--contact-link link link__tablet--tel" href="tel:+38096-111-11-11"><svg
+                                class="tel-icon" width="10px" height="16px">
+                                <use href="./images/sprite.svg#tel-icon"></use>
+                            </svg>+38 96 111
+                            11 11</a>
+                    </div>
+                </li>
+    
             </ul>
-          </nav>
-          <!-- burger mobile button -->
-          <button
-            type="button"
-            aria-expanded="false"
-            aria-controls="mobile-menu-container"
-            class="mobile-button js-open-menu"
-          >
-            <svg
-              width="40"
-              height="40"
-              class="icon-menu"
-              aria-label="Переключатель
-            мобильного меню"
-            >
-              <use
-                class="mobile-button__icon--burger"
-                href="./images/svg/icons.svg#icon-burger"
-              ></use>
-            </svg>
-          </button>
-
-          <ul class="header-contacts">
-            <li class="header-contacts__item">
-              <a class="header-contacts__link" href="mailto:info@devstudio.com"
-                ><svg class="header-contacts__icon-envelope">
-                  <use href="./images/svg/icons.svg#envelope"></use></svg>info@devstudio.com</a
-              >
-            </li>
-            <li class="header-contacts__item">
-              <a class="header-contacts__link" href="tel:+380961111111">
-                <svg class="header-contacts__icon-smartphone">
-                  <use href="./images/svg/icons.svg#smartphone"></use></svg>+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="section">
-        <div class="container portfolio">
-          <h1 class="section__title visually-hidden">Портфолио</h1>
-          <ul class="filter">
-            <li class="filter__item">
-              <button class="filter__button" type="button">Все</button>
-            </li>
-            <li class="filter__item">
-              <button class="filter__button" type="button">Веб-сайты</button>
-            </li>
-            <li class="filter__item">
-              <button class="filter__button" type="button">Приложения</button>
-            </li>
-            <li class="filter__item">
-              <button class="filter__button" type="button">Дизайн</button>
-            </li>
-            <li class="filter__item">
-              <button class="filter__button" type="button">Маркетинг</button>
-            </li>
-          </ul>
-          <article class="portfolio">
-            <ul class="cards-set">
-              <li class="cards-set__card">
-                <a href="" class="cards-set__link">
-                  <div class="card">
-                    <picture>
-                      <source
-                        srcset="
-                          ./images/works/works-1-desktop.jpg 1x,
-                          ./images/works/works-1-desktop.jpg 2x
-                        "
-                        media="(min-width: 1200px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-1-tablet.jpg 1x,
-                          ./images/works/works-1-tablet.jpg 2x
-                        "
-                        media="(min-width: 768px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-1.jpg    1x,
-                          ./images/works/works-1@2x.jpg 2x
-                        "
-                        media="(min-width: 480px)"
-                      />
-                      <img
-                        src="./images/works/works-1.jpg"
-                        alt="Превью страницы веб-сайта Технокряк"
-                      />
-                    </picture>
-                    <div class="card__overlay">
-                      <p class="card__text">
-                        Технокряк это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для
-                        цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="card__meta">
-                    <h2 class="card__title">Технокряк</h2>
-                    <p class="card__description">Веб-сайт</p>
-                  </div>
-                </a>
-              </li>
-              <li class="cards-set__card">
-                <a href="" class="cards-set__link">
-                  <div class="card">
-                    <picture>
-                      <source
-                        srcset="
-                          ./images/works/works-2-desktop.jpg 1x,
-                          ./images/works/works-2-desktop.jpg 2x
-                        "
-                        media="(min-width: 1200px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-2-tablet.jpg 1x,
-                          ./images/works/works-2-tablet.jpg 2x
-                        "
-                        media="(min-width: 768px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-2.jpg    1x,
-                          ./images/works/works-2@2x.jpg 2x
-                        "
-                        media="(min-width: 480px)"
-                      />
-                      <img
-                        src="./images/works/works-2.jpg"
-                        alt="Постер для баскетбольной команды"
-                      />
-                    </picture>
-                    <div class="card__overlay">
-                      <p class="card__text">
-                        Технокряк это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для
-                        цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="card__meta">
-                    <h2 class="card__title">
-                      Постер New Orlean vs Golden Star
-                    </h2>
-                    <p class="card__description">Дизайн</p>
-                  </div>
-                </a>
-              </li>
-              <li class="cards-set__card">
-                <a href="" class="cards-set__link">
-                  <div class="card">
-                    <picture>
-                      <source
-                        srcset="
-                          ./images/works/works-3-desktop.jpg 1x,
-                          ./images/works/works-3-desktop.jpg 2x
-                        "
-                        media="(min-width: 1200px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-3-tablet.jpg 1x,
-                          ./images/works/works-3-tablet.jpg 2x
-                        "
-                        media="(min-width: 768px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-3.jpg    1x,
-                          ./images/works/works-3@2x.jpg 2x
-                        "
-                        media="(min-width: 480px)"
-                      />
-                      <img
-                        src="./images/works/works-3.jpg"
-                        alt="Превью приложения для ресторана"
-                      />
-                    </picture>
-                    <div class="card__overlay">
-                      <p class="card__text">
-                        Технокряк это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для
-                        цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="card__meta">
-                    <h2 class="card__title">Ресторан Seafood</h2>
-                    <p class="card__description">Приложение</p>
-                  </div>
-                </a>
-              </li>
-              <li class="cards-set__card">
-                <a href="" class="cards-set__link">
-                  <div class="card">
-                    <picture>
-                      <source
-                        srcset="
-                          ./images/works/works-4-desktop.jpg 1x,
-                          ./images/works/works-4-desktop.jpg 2x
-                        "
-                        media="(min-width: 1200px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-4-tablet.jpg 1x,
-                          ./images/works/works-4-tablet.jpg 2x
-                        "
-                        media="(min-width: 768px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-4.jpg    1x,
-                          ./images/works/works-4@2x.jpg 2x
-                        "
-                        media="(min-width: 480px)"
-                      />
-                      <img
-                        src="./images/works/works-4.jpg"
-                        alt="Проект Прайм"
-                      />
-                    </picture>
-                    <div class="card__overlay">
-                      <p class="card__text">
-                        Технокряк это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для
-                        цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="card__meta">
-                    <h2 class="card__title">Проект Prime</h2>
-                    <p class="card__description">Маркетинг</p>
-                  </div>
-                </a>
-              </li>
-              <li class="cards-set__card">
-                <a href="" class="cards-set__link">
-                  <div class="card">
-                    <picture>
-                      <source
-                        srcset="
-                          ./images/works/works-5-desktop.jpg 1x,
-                          ./images/works/works-5-desktop.jpg 2x
-                        "
-                        media="(min-width: 1200px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-5-tablet.jpg 1x,
-                          ./images/works/works-5-tablet.jpg 2x
-                        "
-                        media="(min-width: 768px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-5.jpg    1x,
-                          ./images/works/works-5@2x.jpg 2x
-                        "
-                        media="(min-width: 480px)"
-                      />
-                      <img
-                        src="./images/works/works-5.jpg"
-                        alt="Проект Боксес"
-                      />
-                    </picture>
-                    <div class="card__overlay">
-                      <p class="card__text">
-                        Технокряк это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для
-                        цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="card__meta">
-                    <h2 class="card__title">Проект Boxes</h2>
-                    <p class="card__description">Приложение</p>
-                  </div>
-                </a>
-              </li>
-              <li class="cards-set__card">
-                <a href="" class="cards-set__link">
-                  <div class="card">
-                    <picture>
-                      <source
-                        srcset="
-                          ./images/works/works-6-desktop.jpg 1x,
-                          ./images/works/works-6-desktop.jpg 2x
-                        "
-                        media="(min-width: 1200px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-6-tablet.jpg 1x,
-                          ./images/works/works-6-tablet.jpg 2x
-                        "
-                        media="(min-width: 768px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-6.jpg    1x,
-                          ./images/works/works-6@2x.jpg 2x
-                        "
-                        media="(min-width: 480px)"
-                      />
-                      <img
-                        src="./images/works/works-6.jpg"
-                        alt="Проект Боксес"
-                      />
-                    </picture>
-                    <div class="card__overlay">
-                      <p class="card__text">
-                        Технокряк это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для
-                        цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="card__meta">
-                    <h2 class="card__title">Inspiration has no Borders</h2>
-                    <p class="card__description">Веб-сайт</p>
-                  </div>
-                </a>
-              </li>
-              <li class="cards-set__card">
-                <a href="" class="cards-set__link">
-                  <div class="card">
-                    <picture>
-                      <source
-                        srcset="
-                          ./images/works/works-7-desktop.jpg 1x,
-                          ./images/works/works-7-desktop.jpg 2x
-                        "
-                        media="(min-width: 1200px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-7-tablet.jpg 1x,
-                          ./images/works/works-7-tablet.jpg 2x
-                        "
-                        media="(min-width: 768px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-7.jpg    1x,
-                          ./images/works/works-7@2x.jpg 2x
-                        "
-                        media="(min-width: 480px)"
-                      />
-                      <img
-                        src="./images/works/works-7.jpg"
-                        alt="Проект Боксес"
-                      />
-                    </picture>
-                    <div class="card__overlay">
-                      <p class="card__text">
-                        Технокряк это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для
-                        цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="card__meta">
-                    <h2 class="card__title">Издание Limited Edition</h2>
-                    <p class="card__description">Дизайн</p>
-                  </div>
-                </a>
-              </li>
-              <li class="cards-set__card">
-                <a href="" class="cards-set__link">
-                  <div class="card">
-                    <picture>
-                      <source
-                        srcset="
-                          ./images/works/works-8-desktop.jpg 1x,
-                          ./images/works/works-8-desktop.jpg 2x
-                        "
-                        media="(min-width: 1200px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-8-tablet.jpg 1x,
-                          ./images/works/works-8-tablet.jpg 2x
-                        "
-                        media="(min-width: 768px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-8.jpg    1x,
-                          ./images/works/works-8@2x.jpg 2x
-                        "
-                        media="(min-width: 480px)"
-                      />
-                      <img
-                        src="./images/works/works-8.jpg"
-                        alt="Проект Боксес"
-                      />
-                    </picture>
-                    <div class="card__overlay">
-                      <p class="card__text">
-                        Технокряк это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для
-                        цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="card__meta">
-                    <h2 class="card__title">Проект LAB</h2>
-                    <p class="card__description">Маркетинг</p>
-                  </div>
-                </a>
-              </li>
-              <li class="cards-set__card">
-                <a href="" class="cards-set__link">
-                  <div class="card">
-                    <picture>
-                      <source
-                        srcset="
-                          ./images/works/works-9-desktop.jpg 1x,
-                          ./images/works/works-9-desktop.jpg 2x
-                        "
-                        media="(min-width: 1200px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-9-tablet.jpg 1x,
-                          ./images/works/works-9-tablet.jpg 2x
-                        "
-                        media="(min-width: 768px)"
-                      />
-                      <source
-                        srcset="
-                          ./images/works/works-9.jpg    1x,
-                          ./images/works/works-9@2x.jpg 2x
-                        "
-                        media="(min-width: 480px)"
-                      />
-                      <img
-                        src="./images/works/works-9.jpg"
-                        alt="Проект Боксес"
-                      />
-                    </picture>
-                    <div class="card__overlay">
-                      <p class="card__text">
-                        Технокряк это современная площадка распространения
-                        коронавируса. Компании используют эту платформу для
-                        цифрового шпионажа и атак на защищённые сервера
-                        конкурентов.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div class="card__meta">
-                    <h2 class="card__title">Growing Business</h2>
-                    <p class="card__description">Приложение</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="page-footer">
-      <div class="container footer-container">
-        <div class="footer-wrapper">
-          <div class="footer-address">
-            <a href="./index.html" class="footer-address__logo"
-              ><span class="footer-address__logo--accent">Web</span>Studio</a
-            >
-            <address class="address">г. Киев, пр-т Леси Украинки, 26</address>
-            <ul class="footer-contacts">
-              <li class="footer-contacts__item">
-                <a
-                  class="footer-contacts__link"
-                  href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="footer-contacts__item">
-                <a class="footer-contacts__link" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-socials">
-            <h2 class="footer-socials__title">присоединяйтесь</h2>
-            <ul class="footer-socials__list">
-              <li class="footer-socials__item" aria-label="Instagram">
-                <a
-                  href=""
-                  class="footer-socials__link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg class="footer-socials__icon" width="20" height="20">
-                    <use href="./images/svg/icons.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer-socials__item" aria-label="Twitter">
-                <a
-                  href=""
-                  class="footer-socials__link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg class="footer-socials__icon" width="20" height="20">
-                    <use href="./images/svg/icons.svg#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer-socials__item" aria-label="Facebook">
-                <a
-                  href=""
-                  class="footer-socials__link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg class="footer-socials__icon" width="20" height="20">
-                    <use href="./images/svg/icons.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="footer-socials__item" aria-label="Linked-In">
-                <a
-                  href=""
-                  class="footer-socials__link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg class="footer-socials__icon" width="20" height="20">
-                    <use href="./images/svg/icons.svg#linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-subscription">
-            <form name="footer-subscription-form">
-              <label
-                class="footer-subscription__label"
-                for="footer-subscription-form"
-              >
-                Подпишитесь на рассылку
-                <div class="footer-subscription__wrapper">
-                  <input
-                    class="footer-subscription__input"
-                    id="footer-subscription-form"
-                    name="footer-subscription-form"
-                    type="email"
-                    placeholder="E-mail"
-                  />
-                  <button class="hero__button button-footer" type="submit">
-                    Подписаться
-                    <svg class="button-footer__icon">
-                      <use href="./images/svg/icons.svg#icon-send"></use>
-                    </svg>
-                  </button>
+            <!-- START mobile menu -->
+            <button class="burger-btn" data-menu-open>
+                <svg class="burger-btn__icon--menu">
+                    <use href="./images/sprite.svg#icon-menu-burger"></use>
+                </svg>
+            </button>
+            <div class="mobile-menu" data-menu>
+    
+                <nav class="mobile-nav">
+                    <ul class="mobile-nav__list list">
+                        <li class="mobile-nav__item"><a class="mobile-nav__link link" href="./index.html">Студия</a>
+                        </li>
+                        <li class="mobile-nav__item"><a class="mobile-nav__link link current" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="mobile-nav__item"><a class="mobile-nav__link link" href="">Контакты</a></li>
+                    </ul>
+                </nav>
+    
+    
+                <div class="mobile__social--rack">
+                    <ul class="mobile-nav__list list">
+                        <li class="mobile-nav__contact"><a class="mobile-nav__contact--tel link"
+                                href="tel:+38096-111-11-11">+38 96 111
+                                11 11</a></li>
+                        <li class="mobile-nav__contact"><a class="mobile-nav__contact--mail link"
+                                href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    </ul>
+    
+    
+                    <ul class="mobile-nav__social list">
+                        <li class="mobile-nav__social--item">
+                            <a class="mobile-nav__social--link link" href="" target="_blank">Instagram</a>
+                        </li>
+                        <li class="mobile-nav__social--item"><a class="mobile-nav__social--link link" href=""
+                                target="_blank">Twitter</a></li>
+                        <li class="mobile-nav__social--item"><a class="mobile-nav__social--link link" href=""
+                                target="_blank">Facebook</a></li>
+                        <li class="mobile-nav__social--item"><a class="mobile-nav__social--link link" href=""
+                                target="_blank">LinkedIn</a></li>
+                    </ul>
                 </div>
-              </label>
+    
+    
+                <button class="burger-btn--close" data-menu-close>
+                    <svg class="burger-btn__icon--close">
+                        <use href="./images/sprite.svg#icon-close-burger"></use>
+                    </svg>
+                </button>
+            </div>
+            <!-- END mobile button -->
+        </div>
+    
+    </header>
+    <!-- основной контентр -->
+    <main>
+        <!-- фильтры портфолио -->
+                        <section class="portfolio-main-content">
+                            <div class="container btn-container">
+                <h1 class="visually-hidden">Скрытый заголовок</h1>
+                <ul class="list btn-container-list">
+                    <li class="btn-container-item"><button class="btn active-btn" type="button">Все</button></li>
+                    <li class="btn-container-item"><button class="btn" type="button">Веб-сайты</button></li>
+                    <li class="btn-container-item"><button class="btn" type="button">Приложения</button></li>
+                    <li class="btn-container-item"><button class="btn" type="button">Дизайн</button></li>
+                    <li class="btn-container-item"><button class="btn" type="button">Маркетинг</button></li>
+                </ul>
+                <ul class="list container-list-filter">
+                    <li class="container-list-filter-item">
+                        <a href="#" class="container-list-filter-link"><div class="filter-list-wrap">
+                            
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./images/works-1-desktop.webp 1x, ./images/works-1-desktop@2x.webp 2x" type="image/webp" />
+                                <source media="(min-width:1200px)" srcset="./images/works-1-desktop.jpg 1x, ./images/works-1-desktop@2x.jpg 2x" />
+                                <source media="(min-width:768px)" srcset="./images/works-1-tablet.webp 1x, ./images/works-1-tablet@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)" srcset="./images/works-1-tablet.jpg 1x, ./images/works-1-tablet@2x.jpg 2x" />
+                                <source media="(min-width:20px)" srcset="./images/works-1.webp 1x, ./images/works-1@2x.webp 2x" type="image/webp" />
+                                <source media="(min-width:20px)" srcset="./images/works-1.jpg 1x, ./images/works-1@2x.jpg 2x" />
+                            
+                            
+                                <img class="our-team-img" src="#" alt="Технокряк">
+                            
+                            </picture>
+                            <!-- <img src="./images/tehnokryak.jpg"  alt="Технокряк"> -->
+                            
+                                
+                                <p class="portfolio-image-description">Технокряк это современная площадка
+                                    распространения коронавируса. Компании
+                                    используют эту платформу для цифрового
+                                    шпионажа и атак на защищённые сервера конкурентов.</p>
+                        </div>
+                        <div class="container-list-filter-item-description">
+                            <h3 class="portfolio-content">Технокряк</h3>
+                            <p class="portfolio-content-description">Веб-сайт</p>
+                        </div>
+                        </a>
+                    </li>
+                    <li class="container-list-filter-item">
+                        <a href="#" class="container-list-filter-link"><div class="filter-list-wrap">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./images/works-2-desktop.webp 1x, ./images/works-2-desktop@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:1200px)" srcset="./images/works-2-desktop.jpg 1x, ./images/works-2-desktop@2x.jpg 2x" />
+                                <source media="(min-width:768px)" srcset="./images/works-2-tablet.webp 1x, ./images/works-2-tablet@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)" srcset="./images/works-2-tablet.jpg 1x, ./images/works-2-tablet@2x.jpg 2x" />
+                                <source media="(min-width:20px)" srcset="./images/works-2.webp 1x, ./images/works-2@2x.webp 2x" type="image/webp" />
+                                <source media="(min-width:20px)" srcset="./images/works-2.jpg 1x, ./images/works-2@2x.jpg 2x" />
+                            
+                            
+                                <img class="our-team-img" src="#" alt="Постер New Orlean vs Golden Star">
+                            
+                            </picture>
+                            <!-- <img
+                                    src="./images/neworlean.jpg" 
+                                    alt="Постер New Orlean vs Golden Star"> -->
+                                <p class="portfolio-image-description">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Magni laboriosam excepturi incidunt voluptatum maiores labore
+                                    molestias tempore, quia doloremque exercitationem?</p>
+                        </div>
+                        <div class="container-list-filter-item-description">
+                            <h3 class="portfolio-content">Постер <span lang="en">New Orlean vs Golden Star</span>
+                            </h3>
+                            <p class="portfolio-content-description">Дизайн</p>
+                        </div></a>
+                    </li>
+                    <li class="container-list-filter-item"><a href="#" class="container-list-filter-link">
+                        <div class="filter-list-wrap">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./images/works-3-desktop.webp 1x, ./images/works-3-desktop@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:1200px)" srcset="./images/works-3-desktop.jpg 1x, ./images/works-3-desktop@2x.jpg 2x" />
+                                <source media="(min-width:768px)" srcset="./images/works-3-tablet.webp 1x, ./images/works-3-tablet@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)" srcset="./images/works-3-tablet.jpg 1x, ./images/works-3-tablet@2x.jpg 2x" />
+                                <source media="(min-width:20px)" srcset="./images/works-3.webp 1x, ./images/works-3@2x.webp 2x" type="image/webp" />
+                                <source media="(min-width:20px)" srcset="./images/works-3.jpg 1x, ./images/works-3@2x.jpg 2x" />
+                            
+                            
+                                <img class="our-team-img" src="#" alt="Ресторан">
+                            
+                            </picture>
+                            <!-- <img
+                                    src="./images/seafood.jpg" alt="Ресторан"> -->
+                                <p class="portfolio-image-description">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Magni laboriosam
+                                    excepturi incidunt voluptatum maiores labore molestias tempore, quia doloremque
+                                    exercitationem?</p>
+                        </div>
+                        <div class="container-list-filter-item-description">
+                            <h3 class="portfolio-content">Ресторан <span lang="en">Seafood</span></h3>
+                            <p class="portfolio-content-description">Приложение</p>
+                        </div></a>
+                    </li>
+                    <li class="container-list-filter-item">
+                        <a href="#" class="container-list-filter-link"><div class="filter-list-wrap">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./images/works-4-desktop.webp 1x, ./images/works-4-desktop@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:1200px)" srcset="./images/works-4-desktop.jpg 1x, ./images/works-4-desktop@2x.jpg 2x" />
+                                <source media="(min-width:768px)" srcset="./images/works-4-tablet.webp 1x, ./images/works-4-tablet@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)" srcset="./images/works-4-tablet.jpg 1x, ./images/works-4-tablet@2x.jpg 2x" />
+                                <source media="(min-width:20px)" srcset="./images/works-4.webp 1x, ./images/works-4@2x.webp 2x" type="image/webp" />
+                                <source media="(min-width:20px)" srcset="./images/works-4.jpg 1x, ./images/works-4@2x.jpg 2x" />
+                            
+                            
+                                <img class="our-team-img" src="#" alt="Проект Prime">
+                            
+                            </picture>
+                            <!-- <img
+                                    src="./images/prime.jpg" alt="Проект Prime"> -->
+                                <p class="portfolio-image-description">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Magni laboriosam
+                                    excepturi incidunt voluptatum maiores labore molestias tempore, quia doloremque
+                                    exercitationem?</p>
+                        </div>
+                        <div class="container-list-filter-item-description">
+                            <h3 class="portfolio-content">Проект <span lang="en">Prime</span></h3>
+                            <p class="portfolio-content-description">Маркетинг</p>
+                        </div></a>
+                    </li>
+                    <li class="container-list-filter-item">
+                        <a href="#" class="container-list-filter-link"><div class="filter-list-wrap">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./images/works-5-desktop.webp 1x, ./images/works-5-desktop@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:1200px)" srcset="./images/works-5-desktop.jpg 1x, ./images/works-5-desktop@2x.jpg 2x" />
+                                <source media="(min-width:768px)" srcset="./images/works-5-tablet.webp 1x, ./images/works-5-tablet@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)" srcset="./images/works-5-tablet.jpg 1x, ./images/works-5-tablet@2x.jpg 2x" />
+                                <source media="(min-width:20px)" srcset="./images/works-5.webp 1x, ./images/works-5@2x.webp 2x" type="image/webp" />
+                                <source media="(min-width:20px)" srcset="./images/works-5.jpg 1x, ./images/works-5@2x.jpg 2x" />
+                            
+                            
+                                <img class="our-team-img" src="#" alt="Проект Boxes">
+                            
+                            </picture>
+                            <!-- <img
+                                    src="./images/boxes.jpg" alt="Проект Boxes"> -->
+                                <p class="portfolio-image-description">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Magni laboriosam
+                                    excepturi incidunt voluptatum maiores labore molestias tempore, quia doloremque
+                                    exercitationem?</p>
+                        </div>
+                        <div class="container-list-filter-item-description">
+                            <h3 class="portfolio-content">Проект <span lang="en">Boxes</span></h3>
+                            <p class="portfolio-content-description">Приложения</p>
+                        </div></a>
+                    </li>
+                    <li class="container-list-filter-item">
+                        <a href="#" class="container-list-filter-link"><div class="filter-list-wrap">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./images/works-6-desktop.webp 1x, ./images/works-6-desktop@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:1200px)" srcset="./images/works-6-desktop.jpg 1x, ./images/works-6-desktop@2x.jpg 2x" />
+                                <source media="(min-width:768px)" srcset="./images/works-6-tablet.webp 1x, ./images/works-6-tablet@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)" srcset="./images/works-6-tablet.jpg 1x, ./images/works-6-tablet@2x.jpg 2x" />
+                                <source media="(min-width:20px)" srcset="./images/works-6.webp 1x, ./images/works-6@2x.webp 2x" type="image/webp" />
+                                <source media="(min-width:20px)" srcset="./images/works-6.jpg 1x, ./images/works-6@2x.jpg 2x" />
+                            
+                            
+                                <img class="our-team-img" src="#" alt="Inspiration has no Borders">
+                            
+                            </picture>
+                            <!-- <img
+                                    src="./images/inspirationpc.jpg" 
+                                    alt="Inspiration has no Borders"> -->
+                                <p class="portfolio-image-description">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Magni laboriosam
+                                    excepturi incidunt voluptatum maiores labore molestias tempore, quia doloremque
+                                    exercitationem?</p>
+                        </div>
+                        <div class="container-list-filter-item-description">
+                            <h3 class="portfolio-content" lang="en">Inspiration has no Borders</h3>
+                            <p class="portfolio-content-description">Веб-сайт</p>
+                        </div></a>
+                    </li>
+                    <li class="container-list-filter-item">
+                        <a href="#" class="container-list-filter-link"><div class="filter-list-wrap">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./images/works-7-desktop.webp 1x, ./images/works-7-desktop@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:1200px)" srcset="./images/works-7-desktop.jpg 1x, ./images/works-7-desktop@2x.jpg 2x" />
+                                <source media="(min-width:768px)" srcset="./images/works-7-tablet.webp 1x, ./images/works-7-tablet@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)" srcset="./images/works-7-tablet.jpg 1x, ./images/works-7-tablet@2x.jpg 2x" />
+                                <source media="(min-width:20px)" srcset="./images/works-7.webp 1x, ./images/works-7@2x.webp 2x" type="image/webp" />
+                                <source media="(min-width:20px)" srcset="./images/works-7.jpg 1x, ./images/works-7@2x.jpg 2x" />
+                            
+                            
+                                <img class="our-team-img" src="#" alt="Издание Limited Edition">
+                            
+                            </picture>
+                            <!-- <img
+                                    src="./images/limitededition.jpg" 
+                                    alt="Издание Limited Edition"> -->
+                                <p class="portfolio-image-description">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Magni laboriosam
+                                    excepturi incidunt voluptatum maiores labore molestias tempore, quia doloremque
+                                    exercitationem?</p>
+                        </div>
+                        <div class="container-list-filter-item-description">
+                            <h3 class="portfolio-content">Издание <span lang="en">Limited Edition</span></h3>
+                            <p class="portfolio-content-description">Дизайн</p>
+                        </div></a>
+                    </li>
+                    <li class="container-list-filter-item">
+                        <a href="#" class="container-list-filter-link"><div class="filter-list-wrap">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./images/works-8-desktop.webp 1x, ./images/works-8-desktop@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:1200px)" srcset="./images/works-8-desktop.jpg 1x, ./images/works-8-desktop@2x.jpg 2x" />
+                                <source media="(min-width:768px)" srcset="./images/works-8-tablet.webp 1x, ./images/works-8-tablet@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)" srcset="./images/works-8-tablet.jpg 1x, ./images/works-8-tablet@2x.jpg 2x" />
+                                <source media="(min-width:20px)" srcset="./images/works-8.webp 1x, ./images/works-8@2x.webp 2x" type="image/webp" />
+                                <source media="(min-width:20px)" srcset="./images/works-8.jpg 1x, ./images/works-8@2x.jpg 2x" />
+                            
+                            
+                                <img class="our-team-img" src="#" alt="Проект LAB Маркетинг">
+                            
+                            </picture>
+                            <!-- <img
+                                    src="./images/lab.jpg"  alt="Проект LAB Маркетинг"> -->
+                                <p class="portfolio-image-description">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Magni laboriosam
+                                    excepturi incidunt voluptatum maiores labore molestias tempore, quia doloremque
+                                    exercitationem?</p>
+                        </div>
+                        <div class="container-list-filter-item-description">
+                            <h3 class="portfolio-content">Проект <span lang="en">LAB</span></h3>
+                            <p class="portfolio-content-description">Маркетинг</p>
+                        </div></a>
+                    </li>
+                    <li class="container-list-filter-item">
+                        <a href="#" class="container-list-filter-link"><div class="filter-list-wrap">
+                            <picture>
+                                <source media="(min-width:1200px)" srcset="./images/works-9-desktop.webp 1x, ./images/works-9-desktop@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:1200px)" srcset="./images/works-9-desktop.jpg 1x, ./images/works-9-desktop@2x.jpg 2x" />
+                                <source media="(min-width:768px)" srcset="./images/works-9-tablet.webp 1x, ./images/works-9-tablet@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width:768px)" srcset="./images/works-9-tablet.jpg 1x, ./images/works-9-tablet@2x.jpg 2x" />
+                                <source media="(min-width:20px)" srcset="./images/works-9.webp 1x, ./images/works-9@2x.webp 2x" type="image/webp" />
+                                <source media="(min-width:20px)" srcset="./images/works-9.jpg 1x, ./images/works-9@2x.jpg 2x" />
+                            
+                            
+                                <img class="our-team-img" src="#" alt="Growing Business">
+                            
+                            </picture>
+                            <!-- <img
+                                    src="./images/businesslaptop.jpg"  alt="Growing Business"> -->
+                                <p class="portfolio-image-description">Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Magni laboriosam
+                                    excepturi incidunt voluptatum maiores labore molestias tempore, quia doloremque
+                                    exercitationem?</p>
+                        </div>
+                        <div class="container-list-filter-item-description">
+                            <h3 class="portfolio-content" lang="en">Growing Business</h3>
+                            <p class="portfolio-content-description">Приложение</p>
+                        </div></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <!--футер сайта-->
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="footer-left">
+                <a class="logo-footer link footer-logo-link" href="./index.html">Web<span
+                        class="logo-light">Studio</span></a>
+                <address class="address">
+                    <p class="map-address">г. Киев, пр-т Леси Украинки, 26</p>
+                    <ul class="list">
+                        <li class="map-address-list-item"><a class="address-contact link"
+                                href="mailto:info@example.com">info@example.com</a></li>
+                        <li class="map-address-list-item"><a class="address-contact link" href="tel:+38099-111-11-11">+38 99
+                                111 11 11</a></li>
+                    </ul>
+                </address>
+            </div>
+            <div class="footer-right">
+                <p class="footer-links">присоединяйтесь</p>
+                <ul class="list footer-social">
+                    <li class="social-item"> <a class="social-link-dark" href="" target="_blank">
+                            <svg class="social-icon-dark" width="20px" height="20px">
+                                <use href="./images/sprite.svg#icon-instagram"></use>
+                            </svg>
+                        </a></li>
+                    <li class="social-item"> <a class="social-link-dark social-link-dark" href="" target="_blank">
+                            <svg class="social-icon-dark" width="20px" height="20px">
+                                <use href="./images/sprite.svg#icon-twitter"></use>
+                            </svg>
+                        </a></li>
+                    <li class="social-item"> <a class="social-link-dark" href="" target="_blank">
+                            <svg class="social-icon-dark" width="20px" height="20px">
+                                <use href="./images/sprite.svg#icon-facebook"></use>
+                            </svg>
+                        </a></li>
+                    <li class="social-item"> <a class="social-link-dark" href="" target="_blank">
+                            <svg class="social-icon-dark" width="20px" height="20px">
+                                <use href="./images/sprite.svg#icon-linkedin"></use>
+                            </svg>
+                        </a></li>
+                </ul>
+    
+            </div>
+            <form class="subscribe-form">
+                <p class="subscribe">подпишитесь на рассылку</p>
+                <div class="footer-right-submit">
+                        <label class="form-field-subscribe">
+                        <input type="email" class="subscribe-form-input" name="user-mail" placeholder="E-mail" required />
+                    </label><button class="btn-subscribe" type="submit">Подписаться<svg class="subcsribe-send" width="24px"
+                            height="24px">
+                            <use href="./images/sprite.svg#icon-icon-send"></use>
+                        </svg></button>
+                </div>
             </form>
-          </div>
-        </div>
-      </div>
+            </div>
     </footer>
-
-    <!--  mobile menu -->
-    <div class="menu-container js-menu-container" id="mobile-menu">
-      <button class="mobile-button js-close-menu close-menu">
-        <svg width="40" height="40">
-          <use
-            class="close-menu__icon"
-            href="./images/svg/icons.svg#icon-burger-close"
-          ></use>
-        </svg>
-      </button>
-      <ul class="mobile-list">
-        <li class="mobile-list__item">
-          <a href="./index.html" class="mobile-list__link">Студия</a>
-        </li>
-        <li class="mobile-list__item">
-          <a
-            href="./portfolio.html"
-            class="mobile-list__link mobile-list__link--current"
-            >Портфолио</a
-          >
-        </li>
-        <li class="mobile-list__item">
-          <a href="" class="mobile-list__link">Контакты</a>
-        </li>
-      </ul>
-      <div class="mobile-wrap">
-        <ul class="mobile-contacts">
-          <li class="mobile-contacts__item">
-            <a class="mobile-contacts__link" href="tell:+380961111111">
-              +38 096 111 11 11
-            </a>
-          </li>
-          <li class="mobile-contacts__item">
-            <a class="mobile-contacts__link" href="mailto:info@devstudio.com">
-              info@devstudio.com
-            </a>
-          </li>
-        </ul>
-        <ul class="mobile-socials">
-          <li class="mobile-socials__item">
-            <a
-              class="mobile-socials__link mobile-socials__link--divider"
-              href=""
-              >Instagram</a
-            >
-          </li>
-          <li class="mobile-socials__item">
-            <a
-              class="mobile-socials__link mobile-socials__link--divider"
-              href=""
-              >Twitter</a
-            >
-          </li>
-          <li class="mobile-socials__item">
-            <a
-              class="mobile-socials__link mobile-socials__link--divider"
-              href=""
-              >Facebook</a
-            >
-          </li>
-          <li class="mobile-socials__item">
-            <a class="mobile-socials__link" href="">LinkedIn</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!--  modal window -->
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal-window">
-        <h1 class="modal-window__heading">
-          Оставьте свои данные, мы вам перезвоним
-        </h1>
-        <form class="form" name="form">
-          <label class="form__wrapper">
-            <span class="form__label">Имя</span>
-            <input class="form__input" name="username" type="text" required />
-            <svg class="form__icon">
-              <use
-                href="./images/svg/icons.svg#icon-person-black-18dp"
-              ></use></svg></label>
-          <label class="form__wrapper">
-            <span class="form__label">Телефон</span>
-            <input
-              class="form__input"
-              name="user-telephone"
-              type="tel"
-              required />
-            <svg class="form__icon">
-              <use
-                href="./images/svg/icons.svg#icon-phone-black-18dp"
-              ></use></svg></label>
-          <label class="form__wrapper">
-            <span class="form__label">Почта</span>
-            <input
-              class="form__input"
-              name="user-email"
-              type="email"
-              required />
-            <svg class="form__icon">
-              <use
-                href="./images/svg/icons.svg#icon-email-black-18dp "
-              ></use></svg></label>
-          <label class="form__wrapper form__wrapper--textarea">
-            <span class="form__label">Комментарий</span>
-            <textarea
-              class="form__comment"
-              name="form__comment"
-              placeholder="Введите текст"
-            ></textarea>
-          </label>
-          <label class="form__label user-agreement">
-            <input
-              class="form__default-checkbox visually-hidden"
-              type="checkbox"
-              name="user-agreement"
-              value="Соглашаюсь с рассылкой и принимаю Условия договора"
-              required
-            />
-            <svg class="form__checkbox" width="16" height="15">
-              <use href="./images/svg/icons.svg#icon-check"></use></svg>Соглашаюсь с рассылкой и принимаю
-            <a class="form__link" href="">Условия договора</a>
-          </label>
-          <button class="hero__button" type="submit">Отправить</button>
-        </form>
-        <div>
-          <button class="btn-close" type="button" data-modal-close>
-            <svg class="btn-close__icon" width="30" height="30">
-              <use href="./images/svg/icons.svg#icon-close-black-18dp"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
-  </body>
+    <script src="./js/portfolio.js"></script>
+</body>
 </html>

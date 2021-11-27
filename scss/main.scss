@@ -1,0 +1,26 @@
+//UTILS
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+
+//BASE
+@import "./base/common";
+
+//COMPONENTS
+@import "./components/container";
+@import "./components/section";
+@import "./components/modal";
+@import "./components/social-link";
+@import "./components/btn";
+@import "./components/form-modal";
+@import "./components/subscribe-form";
+@import "./components/button-order";
+
+//LAYOUT
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/main-page";
+@import "./layout/portfolio";
+@import "./layout/regular-customers";
+@import "./layout/our-qualities";
+@import "./layout/what-we-do";
+@import "./layout/our-team";

@@ -1,0 +1,52 @@
+.what-we-do-pictures {
+  width: 100%;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.what-we-do-pictures {
+  padding-top: 0px;
+}
+
+.what-we-do-topic {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  color: var(--primary-text-color);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.what-we-do-topic-list {
+  display: flex;
+}
+.what-we-do-topic-img {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.what-we-do-wrap {
+  position: relative;
+  overflow: visible;
+}
+
+.what-we-do-image-description {
+  display: flex;
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--header-color);
+  background-color: var(--backgroudn-image-text-color-two);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
