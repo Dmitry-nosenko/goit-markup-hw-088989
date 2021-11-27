@@ -1,0 +1,15 @@
+.footer-wrapper {
+  @media screen and(min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media screen and(min-width: $desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}

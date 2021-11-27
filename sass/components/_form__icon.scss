@@ -1,0 +1,14 @@
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  pointer-events: none;
+  width: 18px;
+  height: 18px;
+  transition: $fill-transition-250ms;
+
+  .form__input:hover + &,
+  .form__input:focus + & {
+    fill: $accent-color;
+  }
+}

@@ -1,0 +1,20 @@
+.user-agreement {
+  font-family: Roboto;
+  @include centeredFlex();
+  cursor: pointer;
+  font-size: 8px;
+  line-height: calc(11 / 8);
+  letter-spacing: 0.03em;
+  color: $text-color;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $mobile) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+  }
+}

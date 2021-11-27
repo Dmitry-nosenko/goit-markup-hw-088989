@@ -1,0 +1,22 @@
+.form__checkbox {
+  border: 2px solid $text-bold-color;
+  margin-right: 7px;
+  fill: transparent;
+  border-radius: 2px;
+  transition: $fill-transition-250ms, $border-color-transition-250ms;
+
+  .form__default-checkbox:checked + & {
+    background-color: $accent-color;
+    border-radius: 2px;
+    fill: $white;
+    border: none;
+  }
+
+  .user-agreement:hover & {
+    border-color: $accent-color;
+  }
+
+  .form__default-checkbox:focus + & {
+    border-color: $accent-color;
+  }
+}

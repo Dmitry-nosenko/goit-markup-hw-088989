@@ -1,0 +1,10 @@
+.form__label {
+  position: relative;
+  display: block;
+  margin-bottom: 4px;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: $text-color;
+}

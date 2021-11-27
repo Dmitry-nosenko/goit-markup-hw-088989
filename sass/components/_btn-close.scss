@@ -1,0 +1,25 @@
+.btn-close {
+  position: absolute;
+  @include centeredFlex();
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: $fill-transition-250ms;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: $white;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+  }
+}

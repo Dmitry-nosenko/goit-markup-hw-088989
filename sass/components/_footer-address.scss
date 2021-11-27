@@ -1,0 +1,41 @@
+.footer-address {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  &__logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    line-height: calc(28 / 24);
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: $white;
+
+    &--accent {
+      color: $accent-color;
+    }
+  }
+
+  & .address {
+    margin-top: 20px;
+    font-style: normal;
+    color: $white;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0;
+    // margin-right: 165px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    align-items: flex-start;
+    margin: 0;
+    margin-right: 0;
+    &__logo {
+      font-size: 26px;
+      line-height: calc(31 / 26);
+    }
+  }
+}
